@@ -1,0 +1,14 @@
+REDASH_LOG_LEVEL=ERROR
+REDASH_REDIS_URL=redis://redis:6379/0
+REDASH_DATABASE_URL=postgresql://host:port/db?user=&password=
+
+# Celery related settings
+REDASH_CELERY_TASK_RESULT_EXPIRES=1200
+
+# The following enables periodic job (every 5 minutes) of removing unused query results.
+REDASH_QUERY_RESULTS_CLEANUP_COUNT=60000
+REDASH_QUERY_RESULTS_CLEANUP_MAX_AGE=1
+
+REDASH_JOB_EXPIRY_TIME=3600
+
+REDASH_ENABLED_QUERY_RUNNERS=redash.query_runner.pg,redash.query_runner.mssql,redash.query_runner.db2
